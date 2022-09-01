@@ -1,49 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    loadToCarousel();
-    loadDetailsById(1);
-    showSlides()
+    loadDetailsById();
+    loadListToPage();
 })
 
-function loadToCarousel() {
-    fetch(`https://api.jikan.moe/v4/anime/20/pictures`)
+function loadDetailsById() {
+    fetch(`https://api.jikan.moe/v4/random/anime`)
         .then(res => res.json())
-        .then(animePic => console.log(animePic))
+        .then(animeInfo => {
+            document.getElementById('anime-name').innerHTML = animeInfo.data.title_english
+            document.getElementById('anime-japanese-name').innerHTML = animeInfo.data.title_japanese
+            document.getElementById('anime-image').src = animeInfo.data.images.jpg.large_image_url
+            document.getElementById('trailer').src = animeInfo.data.trailer.youtube_id
+            document.getElementById('anime-rating').innerHTML = animeInfo.data.rating
+            document.getElementById('anime-synopsis').innerHTML = animeInfo.data.synopsis
+            document.getElementById('anime-favorites').innerHTML = `Number of likes: ${animeInfo.data.favorites}`
+            document.getElementById('anime-status').innerHTML = animeInfo.data.status
+        })
 }
 
-function loadDetailsById(anime) {
-    fetch(`https://api.jikan.moe/v4/anime/20/full`)
+function loadListToPage() {
+    fetch(`https://api.jikan.moe/v4/anime`)
         .then(res => res.json())
-        .then(animeInfo => console.log(animeInfo))
-}
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 0 }
-    setTimeout(showSlides, 4000); // Change image every 2 seconds
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
-
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+        .then(animeData => {
+            console.log(animeData);
+            document.getElementById('anime-list').innerHTML = animeData.data
+            .map(
+                anime => 
+                `<a href="loadAnimeDetails${anime.mal_id}">${anime.name}</a>`
+            ).join('');
+})
 }
