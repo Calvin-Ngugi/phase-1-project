@@ -2,78 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="./styles/main.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Anime Site</title>
-    <script type="text/javascript" src="index.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <title>My Anime Site</title>
+  <script type="text/javascript" src="index.js"></script>
 </head>
 
 <body>
-    <nav>
-      <div class="nav-title">
-        <h3>My Anime Site</h3>
-      </div>
-        <ul class="nav-menu">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Feedback</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="centered">
-      <div>
-        <h2>Welcome</h2>
-        <p></p>
-      </div>
+  <nav>
+    <div class="nav-title">
+      <h3>My Anime Site</h3>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="centered">
+    <div>
+      <h2 class="title1">Welcome To MAS</h2>
+      <p class="synopsis">
+        This is a place where we will help you discover your need for anime and hook you
+        up with anime in every genre we can get you.
+      </p>
+      <p class="synopsis">
+        We also have our random pop up anime if you are feeling a little
+        adventerous in trying out new content or just rewatching old
+        ones.
+      </p>
+    </div>
     <div class="anime-details">
-        <h2 id="anime-name" class="title">Anime Name Goes Here</h2>
-        <h2 id="anime-japanese-name" class="title">Anime Name Goes Here</h2>
-        <img
-          id="anime-image"
-          alt="Anime Name Goes Here"
-          src="assets/img1.png"
-        />
-        <p class="title">Synopsis</p>
-        <p id="anime-synopsis" class="synopsis">Anime Synopsis Goes Here</p>
-        <p class="title">Rating</p>
-        <p id="anime-rating" class="rate"></p>
+      <h2 id="anime-name" class="title">Anime Name Goes Here</h2>
+      <h2 id="anime-japanese-name" class="title">Anime Name Goes Here</h2>
+      <img id="anime-image" alt="Anime Name Goes Here" src="assets/img1.png" />
+      <p class="title">Synopsis</p>
+      <p id="anime-synopsis" class="synopsis">Anime Synopsis Goes Here</p>
+      <p class="title">Rating</p>
+      <p id="anime-rating" class="rate"></p>
 
-        <div class="spacing">
-          <p class="title">Favorites</p>
-          <p id="anime-favorites" class=""></p>
-          <p class="title">Status</p>
-          <p id="anime-status"class="fav"></p>
-          <p class="title">Trailer</p>
-          <video width="320" height="240" controls><source id="trailer" src="./assets/placeholder.mkv"></video>
-        </div>
-
-        <!--<form id="description-form">
-          <label for="description">Edited Description:</label>
-          <textarea id="description"></textarea>
-          <button type="submit">Update Anime</button>
-        </form>
-
-        <h3>Customer Reviews</h3>
-        <ul id="review-list">
-          <li>Replace with actual reviews</li>
-          <li>From the server</li>
-        </ul>
-        <form id="review-form">
-          <label for="review">Your Review:</label>
-          <textarea id="review"></textarea>
-          <button type="submit">Add review</button>
-        </form>-->
+      <div class="spacing">
+        <p class="title">Favorites</p>
+        <p id="anime-favorites" class=""></p>
+        <p class="title">Status</p>
+        <p id="anime-status" class="fav"></p>
+        <p class="title">Trailer</p>
+        <figure>
+          <iframe id="trailer" width="500" height="300" src="https://www.youtube.com/embed/qig4KOK2R2g?enablejsapi=1&wmode=opaque&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </figure>
       </div>
     </div>
-    
-    <section class="list-section">
-      <div>
-        <p id="anime-list">
-          
-        </p>
-      </div>
-    </section>
-</body>
+  </div>
 
+  <section>
+    <div class="list-section">
+      <div class="container" id="anime-list">
+      </div>
+    </div>
+  </section>
+
+</body>
 </html>
