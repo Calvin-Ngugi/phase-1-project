@@ -156,3 +156,10 @@ li {
     display: grid;
     place-items: center;
 }
+
+#review-list li {
+    background-color: #fff3a9;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }

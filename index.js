@@ -23,7 +23,7 @@ function loadListToPage() {
     fetch(`https://api.jikan.moe/v4/anime`)
         .then(res => res.json())
         .then(animeData => {
-            console.log(animeData);
+            //console.log(animeData);
             animeData.data.forEach(animeCard => renderCards(animeCard))
         })
 }
@@ -66,7 +66,7 @@ function addAnime(){
     document.querySelector('.add-anime-form').addEventListener('submit', (e)=>{
         e.preventDefault();
         let form = e.target;
-        document.querySelector('#review-list').innerHTML = `<li>${form.review.value}</li>`;
+        document.querySelector('#review-list').innerHTML += `<li class="paragraph">${form.review.value}</li>`;
         form.reset();
     })
 }
