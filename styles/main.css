@@ -6,7 +6,7 @@
 
 nav {
     display: flex;
-    background-color: aqua;
+    background-color: #eda;
     width: 100%;
     padding-top: 15px;
 }
@@ -52,7 +52,8 @@ nav {
 .anime-details {
     text-align: center;
     margin-top: 30px;
-    background-color: #fdb;
+    padding-top: 10px;
+    background-color: #eda;
 }
 
 .synopsis {
@@ -89,7 +90,18 @@ li {
     list-style: none;
 }
 
-.container{
+.paragraph{
+    text-align: center;
+    font-style: oblique;
+    font-size: 17px;
+    font-style: 'Poppins', sans-serif;
+}
+
+.list-section{
+    margin-top: 30px;
+}
+
+.container1{
     display: flex;
     flex-wrap: wrap;
 }
@@ -102,3 +114,37 @@ li {
     width: 410px;
     background-color: #f1f1f1;
 }
+
+.add-toy-form {
+    width: 80%
+  }
+  
+  .submit {
+    position: relative;
+    background-color: #e04b52;
+    border-radius: 5px;
+    height: 2rem;
+    width: max-content;
+    color: whitesmoke;
+    font-size: 18px;
+    justify-self: center;
+    font-family: monospace;
+    margin: 3px;
+  }
+  
+  .submit:hover {
+    background-color: whitesmoke;
+    border: #e04b52 solid 1px;
+    color: #e04b52;
+  }
+  
+  
+  .input-text {
+    border-radius: 5px;
+    height: 2rem;
+    width: 60%;
+    font-size: 18px;
+    font-family: monospace;
+    margin: 3px;
+  }
+  

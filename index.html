@@ -13,7 +13,6 @@
   <script type="text/javascript" src="index.js"></script>
 </head>
 
-<body>
   <nav>
     <div class="nav-title">
       <h3>My Anime Site</h3>
@@ -61,10 +60,27 @@
 
   <section>
     <div class="list-section">
-      <div class="container" id="anime-list">
+      <h2 class="title1">Here is List of Some Clasic Throwbacks.</h2>
+      <p class="paragraph">Check them out to see if you are interested and drop a like</p>
+      <div class="container container1" id="anime-list">
       </div>
     </div>
   </section>
+
+  <!--Editing phase-->
+  <div class="container">
+    <form class="add-anime-form">
+      <h3>Submit an anime!</h3>
+
+      <input type="text" name="name" value="" placeholder="Enter anime name..." class="input-text"/>
+      <br />
+      <input type="text" name="image" value="" placeholder="Enter anime's image URL..." class="input-text"/>
+      <br />
+      <input type="text" name="image" value="" placeholder="Enter anime's description..." class="input-text"/>
+      <br />
+      <input type="submit" name="submit" value="Submit Anime" class="submit"/>
+    </form>
+  </div>
 
 </body>
 </html>
