@@ -68,19 +68,20 @@
   </section>
 
   <!--Editing phase-->
-  <div class="container">
+  <div class="container centered2">
     <form class="add-anime-form">
-      <h3>Submit an anime!</h3>
-
-      <input type="text" name="name" value="" placeholder="Enter anime name..." class="input-text"/>
+      <h3>Give us your feedback!</h3>
+      <input type="text" id="review" name="name" value="" placeholder="Place Comments" class="input-text"/>
       <br />
-      <input type="text" name="image" value="" placeholder="Enter anime's image URL..." class="input-text"/>
-      <br />
-      <input type="text" name="image" value="" placeholder="Enter anime's description..." class="input-text"/>
-      <br />
-      <input type="submit" name="submit" value="Submit Anime" class="submit"/>
+      <input type="submit" name="submit" value="Submit Feedback" class="submit"/>
     </form>
+    <div class="centered2">
+      <br />
+    <h3>Customer Reviews</h3>
+        <ul id="review-list">
+          <li class="paragraph">Please add your comments here :)</li>
+        </ul>
+      </div>
   </div>
-
 </body>
 </html>

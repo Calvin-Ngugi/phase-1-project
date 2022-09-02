@@ -63,9 +63,10 @@ function renderCards(animeCard) {
 }
 
 function addAnime(){
-    document.getElementById('add-anime-form').addEventListener('submit', (e)=>{
+    document.querySelector('.add-anime-form').addEventListener('submit', (e)=>{
         e.preventDefault();
         let form = e.target;
-
+        document.querySelector('#review-list').innerHTML = `<li>${form.review.value}</li>`;
+        form.reset();
     })
 }
