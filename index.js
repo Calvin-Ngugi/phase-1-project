@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     loadDetailsById();
     loadListToPage();
-    addAnime();
+    addComments();
 })
 
 function loadDetailsById() {
@@ -62,7 +62,7 @@ function renderCards(animeCard) {
     document.getElementById('anime-list').appendChild(card)
 }
 
-function addAnime(){
+function addComments(){
     document.querySelector('.add-anime-form').addEventListener('submit', (e)=>{
         e.preventDefault();
         let form = e.target;
